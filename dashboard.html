@@ -4,41 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Dashboard | RWA Marketing Epi</title>
+  <title>RWA Marketing Epi - Dashboard</title>
 
   <link rel="stylesheet" href="dashboard.css">
 </head>
 
 <body>
 
-  <div class="container">
+<div class="app">
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
 
-      <h2>RWA Market</h2>
+    <h2>RWA Market</h2>
 
-      <a href="#">🏠 Home</a>
-      <a href="#">📦 Products</a>
-      <a href="#">🛒 Orders</a>
-      <a href="#">💰 Wallet</a>
-      <a href="#">📊 Stats</a>
-      <a href="#">⚙ Settings</a>
+    <button onclick="showSection('home')">🏠 Home</button>
+    <button onclick="showSection('products')">📦 Products</button>
+    <button onclick="showSection('orders')">🛒 Orders</button>
+    <button onclick="showSection('wallet')">💰 Wallet</button>
+    <button onclick="showSection('stats')">📊 Stats</button>
 
-      <button onclick="logout()">Logout</button>
+    <button class="logout" onclick="logout()">🚪 Logout</button>
 
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <div class="topbar">
+      <h2 id="title">Dashboard</h2>
+      <p>Welcome 👋</p>
     </div>
 
-    <!-- MAIN -->
-    <div class="main">
+    <!-- HOME -->
+    <div id="home" class="section active">
 
-      <!-- TOP BAR -->
-      <div class="topbar">
-        <h3>Welcome Back 👋</h3>
-        <p id="userInfo">User</p>
-      </div>
-
-      <!-- CARDS -->
       <div class="cards">
 
         <div class="card">
@@ -58,15 +58,39 @@
 
       </div>
 
-      <!-- CONTENT AREA -->
-      <div class="content">
-        <h3>Latest Activity</h3>
-        <p>No activity yet...</p>
-      </div>
+    </div>
 
+    <!-- PRODUCTS -->
+    <div id="products" class="section">
+      <h3>My Products</h3>
+      <button class="add">+ Add Product</button>
+      <p>No products yet</p>
+    </div>
+
+    <!-- ORDERS -->
+    <div id="orders" class="section">
+      <h3>Orders</h3>
+      <p>No orders yet</p>
+    </div>
+
+    <!-- WALLET -->
+    <div id="wallet" class="section">
+      <h3>Wallet</h3>
+      <p>Balance: 0 RWF</p>
+      <button class="withdraw">Withdraw</button>
+    </div>
+
+    <!-- STATS -->
+    <div id="stats" class="section">
+      <h3>Stats</h3>
+      <p>No data yet</p>
     </div>
 
   </div>
- <script src="dashboard.js"></script>
+
+</div>
+
+<script src="dashboard.js"></script>
+
 </body>
-</html>
+  </html>
