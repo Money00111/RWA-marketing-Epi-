@@ -1,43 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+}
 
-  <title>Login | RWA Marketing Epi</title>
+.login-container{
+  display:flex;
+  height:100vh;
+}
 
-  <link rel="stylesheet" href="login.css">
-</head>
+/* LEFT SIDE */
+.login-left{
+  flex:1;
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
 
-<body>
+.login-left h1{
+  font-size:28px;
+}
 
-  <div class="login-container">
+.login-left p{
+  opacity:0.9;
+}
 
-    <!-- LEFT SIDE (IMAGE) -->
-    <div class="login-left">
-      <h1>RWA Marketing Epi</h1>
-      <p>Buy & Sell Anything Easily</p>
-    </div>
+/* RIGHT SIDE */
+.login-right{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:40px;
+}
 
-    <!-- RIGHT SIDE (FORM) -->
-    <div class="login-right">
+.login-right h2{
+  margin-bottom:20px;
+  color:#10b981;
+}
 
-      <h2>Login</h2>
+/* INPUTS */
+.login-right input{
+  padding:12px;
+  margin:8px 0;
+  border:1px solid #ddd;
+  border-radius:10px;
+  outline:none;
+}
 
-      <input type="text" id="emailPhone" placeholder="Email or Phone">
-      <input type="password" id="password" placeholder="Password">
+/* BUTTON */
+.login-right button{
+  padding:12px;
+  margin-top:10px;
+  border:none;
+  border-radius:10px;
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+}
 
-      <button onclick="login()">Login</button>
+/* SWITCH */
+.switch{
+  margin-top:15px;
+  font-size:14px;
+}
 
-      <p class="switch">
-        Don't have account?
-        <a href="../register/register.html">Register</a>
-      </p>
-
-    </div>
-
-  </div>
-
-  <script src="login.js"></script>
-</body>
-</html>
+.switch a{
+  color:#10b981;
+  text-decoration:none;
+}
