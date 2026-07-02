@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RWA Marketing Epi</title>
+
+<link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+  <div class="auth-box">
+
+    <div class="tabs">
+      <button onclick="showLogin()">Login</button>
+      <button onclick="showRegister()">Register</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="loginBox" class="form active">
+      <h2>Login</h2>
+
+      <input type="text" id="loginUser" placeholder="Email or Phone">
+      <input type="password" id="loginPass" placeholder="Password">
+
+      <button onclick="login()">Login</button>
+    </div>
+
+    <!-- REGISTER -->
+    <div id="registerBox" class="form">
+      <h2>Create Account</h2>
+
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="text" id="email" placeholder="Email">
+      <input type="text" id="phone" placeholder="Phone">
+      <input type="password" id="pass" placeholder="Password">
+
+      <select id="role">
+        <option>Buyer</option>
+        <option>Seller</option>
+      </select>
+
+      <button onclick="register()">Create Account</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+  </html>
