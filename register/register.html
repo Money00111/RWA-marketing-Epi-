@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Register | RWA Marketing Epi</title>
+
+  <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+  <div class="register-container">
+
+    <!-- LEFT -->
+    <div class="register-left">
+      <h1>Join RWA Market</h1>
+      <p>Start buying & selling today</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="register-right">
+
+      <h2>Create Account</h2>
+
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="text" id="email" placeholder="Email">
+      <input type="text" id="phone" placeholder="Phone Number">
+      <input type="password" id="password" placeholder="Password">
+
+      <select id="role">
+        <option value="buyer">Buyer</option>
+        <option value="seller">Seller</option>
+      </select>
+
+      <button onclick="register()">Create Account</button>
+
+      <p class="switch">
+        Already have account?
+        <a href="../login/login.html">Login</a>
+      </p>
+
+    </div>
+
+  </div>
+
+  <script src="register.js"></script>
+
+</body>
+  </html>
