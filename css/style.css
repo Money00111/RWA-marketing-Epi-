@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: #f5f7fb;
+  color: #222;
+}
+
+/* HEADER */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  color: white;
+}
+
+.logo{
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* SEARCH */
+.search-box input{
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  outline: none;
+}
+
+/* AUTH BUTTONS */
+.auth-buttons a{
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.auth-buttons .btn{
+  background: white;
+  color: #10b981;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* CATEGORIES */
+.categories{
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  overflow-x: auto;
+}
+
+.categories button{
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.categories button:hover{
+  background: #10b981;
+  color: white;
+}
+
+/* PRODUCTS */
+.products{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.product-card{
+  background: white;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.product-card:hover{
+  transform: translateY(-5px);
+}
+
+.product-card img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card h3{
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.product-card p{
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* BUTTON */
+.product-card button{
+  width: 100%;
+  margin-top: 5px;
+  padding: 7px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  color: white;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer{
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  color: #666;
+  }
