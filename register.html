@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | RWA Marketing Epi</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:#f5f7fb;
+    }
+
+    .box{
+      background:white;
+      padding:25px;
+      width:320px;
+      border-radius:15px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2{
+      text-align:center;
+      color:#10b981;
+      margin-bottom:10px;
+    }
+
+    input, select{
+      width:100%;
+      padding:10px;
+      margin:6px 0;
+      border:1px solid #ddd;
+      border-radius:10px;
+      outline:none;
+    }
+
+    button{
+      width:100%;
+      padding:10px;
+      border:none;
+      border-radius:10px;
+      background:linear-gradient(135deg, #10b981, #3b82f6);
+      color:white;
+      font-weight:bold;
+      cursor:pointer;
+      margin-top:10px;
+    }
+
+    .back{
+      text-align:center;
+      margin-top:10px;
+    }
+
+    .back a{
+      color:#10b981;
+      text-decoration:none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="box">
+
+    <h2>Register</h2>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <input type="password" id="password" placeholder="Password">
+
+    <select id="role">
+      <option value="buyer">Buyer</option>
+      <option value="seller">Seller</option>
+    </select>
+
+    <button onclick="register()">Create Account</button>
+
+    <div class="back">
+      <a href="login.html">← Back to Login</a>
+    </div>
+
+  </div>
+
+  <script src="js/auth.js"></script>
+
+</body>
+</html>
