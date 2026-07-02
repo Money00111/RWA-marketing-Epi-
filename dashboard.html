@@ -1,96 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>RWA Marketing Epi - Dashboard</title>
-
-  <link rel="stylesheet" href="dashboard.css">
+<title>Dashboard</title>
+<link rel="stylesheet" href="app.css">
 </head>
 
 <body>
 
-<div class="app">
+<div class="auth-box">
+  <h2>Welcome to RWA Market</h2>
 
-  <!-- SIDEBAR -->
-  <div class="sidebar">
+  <p>Dashboard loaded successfully</p>
 
-    <h2>RWA Market</h2>
-
-    <button onclick="showSection('home')">🏠 Home</button>
-    <button onclick="showSection('products')">📦 Products</button>
-    <button onclick="showSection('orders')">🛒 Orders</button>
-    <button onclick="showSection('wallet')">💰 Wallet</button>
-    <button onclick="showSection('stats')">📊 Stats</button>
-
-    <button class="logout" onclick="logout()">🚪 Logout</button>
-
-  </div>
-
-  <!-- MAIN -->
-  <div class="main">
-
-    <div class="topbar">
-      <h2 id="title">Dashboard</h2>
-      <p>Welcome 👋</p>
-    </div>
-
-    <!-- HOME -->
-    <div id="home" class="section active">
-
-      <div class="cards">
-
-        <div class="card">
-          <h3>Balance</h3>
-          <p>0 RWF</p>
-        </div>
-
-        <div class="card">
-          <h3>Orders</h3>
-          <p>0</p>
-        </div>
-
-        <div class="card">
-          <h3>Products</h3>
-          <p>0</p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- PRODUCTS -->
-    <div id="products" class="section">
-      <h3>My Products</h3>
-      <button class="add">+ Add Product</button>
-      <p>No products yet</p>
-    </div>
-
-    <!-- ORDERS -->
-    <div id="orders" class="section">
-      <h3>Orders</h3>
-      <p>No orders yet</p>
-    </div>
-
-    <!-- WALLET -->
-    <div id="wallet" class="section">
-      <h3>Wallet</h3>
-      <p>Balance: 0 RWF</p>
-      <button class="withdraw">Withdraw</button>
-    </div>
-
-    <!-- STATS -->
-    <div id="stats" class="section">
-      <h3>Stats</h3>
-      <p>No data yet</p>
-    </div>
-
-  </div>
-
+  <button onclick="logout()">Logout</button>
 </div>
 
-<script src="dashboard.js"></script>
+<script>
+function logout(){
+  window.location.href = "auth.html";
+}
+</script>
 
 </body>
-  </html>
+</html>
