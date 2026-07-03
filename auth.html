@@ -1,55 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RWA Marketing Epi</title>
 
-<link rel="stylesheet" href="app.css">
+<meta name="theme-color" content="#16a34a">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="auth.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<div class="auth-container">
+<!-- ===========================
+BACKGROUND
+=========================== -->
 
-  <div class="auth-box">
+<div class="background">
 
-    <div class="tabs">
-      <button onclick="showLogin()">Login</button>
-      <button onclick="showRegister()">Register</button>
-    </div>
+<div class="gradient one"></div>
 
-    <!-- LOGIN -->
-    <div id="loginBox" class="form active">
-      <h2>Login</h2>
+<div class="gradient two"></div>
 
-      <input type="text" id="loginUser" placeholder="Email or Phone">
-      <input type="password" id="loginPass" placeholder="Password">
-
-      <button onclick="login()">Login</button>
-    </div>
-
-    <!-- REGISTER -->
-    <div id="registerBox" class="form">
-      <h2>Create Account</h2>
-
-      <input type="text" id="name" placeholder="Full Name">
-      <input type="text" id="email" placeholder="Email">
-      <input type="text" id="phone" placeholder="Phone">
-      <input type="password" id="pass" placeholder="Password">
-
-      <select id="role">
-        <option>Buyer</option>
-        <option>Seller</option>
-      </select>
-
-      <button onclick="register()">Create Account</button>
-    </div>
-
-  </div>
+<div class="gradient three"></div>
 
 </div>
 
-<script src="app.js"></script>
+<!-- ===========================
+AUTH CONTAINER
+=========================== -->
+
+<div class="auth-container">
+
+<!-- LEFT SIDE -->
+
+<div class="left-side">
+
+<div class="brand">
+
+<img
+src="../assets/logo/logo.png"
+alt="Logo"
+class="logo">
+
+<h1>
+
+RWA Marketing Epi
+
+</h1>
+
+<p>
+
+Smart Marketplace For Buyers & Sellers
+
+</p>
+
+</div>
+
+<div class="hero-image">
+
+<img
+src="../assets/images/marketplace.png"
+alt="Marketplace">
+
+</div>
+
+<div class="hero-text">
+
+<h2>
+
+Buy. Sell. Grow.
+
+</h2>
+
+<p>
+
+Buy products.
+
+Sell products.
+
+Manage your business.
+
+Track your wallet.
+
+Everything in one application.
+
+</p>
+
+</div>
+
+<div class="language-area">
+
+<button id="kinyaBtn">
+
+🇷🇼 Kinyarwanda
+
+</button>
+
+<button id="englishBtn">
+
+🇬🇧 English
+
+</button>
+
+</div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="right-side">
+
+<div class="auth-card">
+
+<div class="tab-buttons">
+
+<button
+class="tab active"
+id="loginTab">
+
+Login
+
+</button>
+
+<button
+class="tab"
+id="registerTab">
+
+Register
+
+</button>
+
+</div>
+
+<!-- LOGIN FORM -->
+
+<div
+class="page active"
+id="loginPage">
+
+<h2>
+
+Welcome Back
+
+</h2>
+
+<p>
+
+Login to continue
+
+</p>
+
+<div class="input-box">
+
+<label>
+
+Email or Phone
+
+</label>
+
+<div class="input-field">
+
+<i class="fa-solid fa-user"></i>
+
+<input
+type="text"
+id="loginUser"
+placeholder="Enter Email or Phone">
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<label>
+
+Password
+
+</label>
+
+<div class="input-field">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="loginPassword"
+placeholder="Enter Password">
+
+<i
+class="fa-solid fa-eye"
+id="toggleLoginPassword">
+
+</i>
+
+</div>
+
+</div>
+
+<div class="remember-row">
+
+<label>
+
+<input type="checkbox">
+
+Remember me
+
+</label>
+
+<a href="#">
+
+Forgot Password?
+
+</a>
+
+</div>
+
+<button
+class="primary-btn"
+id="loginBtn">
+
+<i class="fa-solid fa-right-to-bracket"></i>
+
+Login
+
+</button>
+
+<div class="divider">
+
+<span>
+
+OR
+
+</span>
+
+</div>
+
+<button
+class="google-btn">
+
+<i class="fa-brands fa-google"></i>
+
+Continue with Google
+
+</button>
+
+<button
+class="guest-btn">
+
+Continue as Guest
+
+</button>
+
+</div>
+
+<!-- REGISTER FORM -->
+
+<div
+class="page"
+id="registerPage">
+
+  <h2>
+
+Create Your Account
+
+</h2>
+
+<p>
+
+Join thousands of buyers and sellers across Rwanda.
+
+</p>
+
+<div class="input-box">
+
+<label>
+
+Full Name
+
+</label>
+
+<div class="input-field">
+
+<i class="fa-solid fa-user"></i>
+
+<input
+type="text"
+id="fullName"
+placeholder="Enter your full name">
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<label>
+
+Email Address
+
+</label>
+
+<div class="input-field">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+type="email"
+id="email"
+placeholder="example@gmail.com">
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<label>
+
+Phone Number
+
+</label>
+
+<div class="input-field">
+
+<i class="fa-solid fa-phone"></i>
+
+<input
+type="tel"
+id="phone"
+placeholder="+250 7XX XXX XXX">
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<label>
+
+Password
+
+</label>
+
+<div class="input-field">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="password"
+placeholder="Create Password">
+
+<i
+class="fa-solid fa-eye"
+id="toggleRegisterPassword">
+
+</i>
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<label>
+
+Confirm Password
+
+</label>
+
+<div class="input-field">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm Password">
+
+<i
+class="fa-solid fa-eye"
+id="toggleConfirmPassword">
+
+</i>
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<label>
+
+Account Type
+
+</label>
+
+<div class="account-type">
+
+<button
+type="button"
+class="role-btn active"
+data-role="buyer">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Buyer
+
+</button>
+
+<button
+type="button"
+class="role-btn"
+data-role="seller">
+
+<i class="fa-solid fa-store"></i>
+
+Seller
+
+</button>
+
+</div>
+
+<input
+type="hidden"
+id="selectedRole"
+value="buyer">
+
+</div>
+
+<div class="checkbox-row">
+
+<label>
+
+<input
+type="checkbox"
+id="agreeTerms">
+
+I agree with the
+
+<a href="#">
+
+Terms & Conditions
+
+</a>
+
+</label>
+
+</div>
+
+<button
+class="primary-btn"
+id="registerBtn">
+
+<i class="fa-solid fa-user-plus"></i>
+
+Create Account
+
+</button>
+
+<div class="divider">
+
+<span>
+
+OR
+
+</span>
+
+</div>
+
+<button
+class="google-btn">
+
+<i class="fa-brands fa-google"></i>
+
+Register with Google
+
+</button>
+
+<button
+class="facebook-btn">
+
+<i class="fa-brands fa-facebook-f"></i>
+
+Register with Facebook
+
+</button>
+
+<div class="already-account">
+
+Already have an account?
+
+<a
+href="#"
+id="goLogin">
+
+Login
+
+</a>
+
+</div>
+
+</div>
+
+<!-- END REGISTER PAGE -->
+
+<div class="security-info">
+
+<div class="security-item">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<span>
+
+Secure Login
+
+</span>
+
+</div>
+
+<div class="security-item">
+
+<i class="fa-solid fa-lock"></i>
+
+<span>
+
+Encrypted Data
+
+</span>
+
+</div>
+
+<div class="security-item">
+
+<i class="fa-solid fa-bolt"></i>
+
+<span>
+
+Fast Access
+
+</span>
+
+</div>
+
+  </div>
+
+  <!-- ===========================
+FOOTER
+=========================== -->
+
+<div class="auth-footer">
+
+<div class="footer-links">
+
+<a href="#">Privacy Policy</a>
+
+<a href="#">Terms of Service</a>
+
+<a href="#">Help Center</a>
+
+<a href="#">Contact Us</a>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 RWA Marketing Epi.
+
+All Rights Reserved.
+
+</p>
+
+<p>
+
+Version 1.0.0
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- END AUTH CARD -->
+
+</div>
+
+<!-- END RIGHT SIDE -->
+
+</div>
+
+<!-- END AUTH CONTAINER -->
+
+<!-- Loading Overlay -->
+
+<div class="loading-overlay" id="loadingOverlay">
+
+<div class="loader"></div>
+
+<p>Please wait...</p>
+
+</div>
+
+<!-- Toast Notification -->
+
+<div id="toast" class="toast">
+
+<span id="toastMessage">
+
+Welcome
+
+</span>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="auth.js"></script>
+
 </body>
+
   </html>
